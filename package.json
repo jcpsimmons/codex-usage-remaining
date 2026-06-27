@@ -1,15 +1,15 @@
 {
-  "name": "codex-usage-remaining",
+  "name": "codex-token-burner",
   "version": "0.1.0",
-  "description": "Small Bun CLI for reading Codex usage remaining from the local app-server.",
+  "description": "Bun CLI for intentionally burning down Codex usage windows with unattended runs.",
   "type": "module",
   "bin": {
-    "codex-usage-remaining": "./src/index.ts"
+    "codex-token-burner": "./src/index.ts"
   },
   "scripts": {
     "run": "bun src/index.ts run",
     "start": "bun src/index.ts",
-    "check": "bun build src/index.ts --target=bun --outdir=/tmp/codex-usage-remaining-build"
+    "check": "bun build src/index.ts --target=bun --outdir=/tmp/codex-token-burner-build"
   },
   "license": "MIT",
   "engines": {

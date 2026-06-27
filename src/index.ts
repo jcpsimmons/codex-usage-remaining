@@ -47,7 +47,7 @@ const promptsPath = join(repoRoot, "data", "project-prompts.json");
 const defaultRunRoot = join(repoRoot, "runs");
 
 function usage(exitCode = 0): never {
-  const command = process.argv[1]?.split("/").at(-1) ?? "codex-usage-remaining";
+  const command = process.argv[1]?.split("/").at(-1) ?? "codex-token-burner";
   const stream = exitCode === 0 ? process.stdout : process.stderr;
   stream.write(`Usage: ${command} [run [--dry-run]|status [five-hour|weekly]|raw|doctor-json]\n`);
   process.exit(exitCode);
@@ -150,7 +150,7 @@ async function fetchCodexRateLimits(): Promise<RateLimits> {
       method: "initialize",
       params: {
         clientInfo: {
-          name: "codex-usage-remaining",
+          name: "codex-token-burner",
           version: "0.1.0",
         },
       },
